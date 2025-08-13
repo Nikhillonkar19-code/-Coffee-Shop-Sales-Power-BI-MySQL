@@ -1,15 +1,8 @@
-# -Coffee-Shop-Sales-Power-BI-MySQL
-Got it — I’ll integrate your **Problem Statement** and **KPI/Chart Requirements** directly under the *Project Description* so your README reads like a professional case study.
+# ☕ Coffee-Shop-Sales-Power-BI-MySQL
 
-Here’s the **fully integrated README.md**:
+![Dashboard Preview](https://github.com/Nikhillonkar19-code/-Coffee-Shop-Sales-Power-BI-MySQL/blob/main/Coffee-Shop-Sales.png)
 
----
-
-# ☕ Coffee Shop Sales — Power BI + MySQL (Portfolio Project)
-
-![Portfolio Hero](images/coffee-portfolio-hero.png)
-
-> An end-to-end business intelligence project analyzing real coffee shop transactional data. Designed and implemented a fully interactive Power BI dashboard connected to MySQL, delivering actionable insights into sales, orders, and product performance trends.
+An end-to-end business intelligence project analyzing real coffee shop transactional data. Designed and implemented a fully interactive Power BI dashboard connected to MySQL, delivering actionable insights into sales, orders, and product performance trends.
 
 ---
 
@@ -18,182 +11,156 @@ Here’s the **fully integrated README.md**:
 This project simulates a **real-world retail analytics** scenario for a coffee shop chain with multiple locations.
 
 ### Process Overview
-
-* **Data Extraction & Loading** — Loaded raw transactional CSV files into **MySQL**.
-* **Data Transformation** — Cleaned and shaped data in **Power Query**.
-* **Data Modeling** — Built a **star schema** with:
-
-  * **Fact Table:** `Transactions`
-  * **Dimension Table:** `Date Table`
-* **DAX Measures** — Created KPIs:
-
-  * Total Sales
-  * Total Orders
-  * Total Quantity Sold
-  * Month-over-Month (MoM) growth and difference
-  * Daily average sales
-* **Visualization Design** — Built interactive visuals to:
-
-  * Detect sales trends
-  * Compare performance across stores and categories
-  * Highlight peak sales days/hours
+- **Data Extraction & Loading** — Load raw transactional CSV files into **MySQL**.
+- **Data Transformation** — Clean and shape data in **Power Query**.
+- **Data Modeling** — Build a **star schema** with:
+  - **Fact Table:** `Transactions`
+  - **Dimension Table:** `Date Table`
+- **DAX Measures** — Create KPIs:
+  - Total Sales, Total Orders, Total Quantity Sold
+  - Month-over-Month (MoM) growth and difference
+  - Daily average sales
+- **Visualization Design** — Build interactive visuals to:
+  - Detect sales trends
+  - Compare category and store performance
+  - Highlight peak sales periods
 
 ---
 
-## 📌 Problem Statement
+## 🛠 Problem Statement
 
-The coffee shop chain needed a **comprehensive sales performance dashboard** to monitor business health, identify trends, and optimize product and store strategies. The dashboard had to answer key business questions such as:
+The coffee shop chain required a **sales performance dashboard** to monitor business health, identify trends, and optimize product and store strategies. The dashboard needed to answer:
 
-* How are sales trending compared to last month?
-* Which days and hours have the highest demand?
-* How do weekends compare to weekdays in terms of revenue?
-* Which product categories and items are top performers?
-* Which store locations are improving or declining?
+- How are sales trending compared to last month?
+- Which days and hours have the highest demand?
+- How do weekends compare to weekdays in revenue?
+- Which product categories and items are top performers?
+- Which store locations are improving or declining?
 
 ---
 
 ## 📊 KPI Requirements
 
-### 1. **Total Sales Analysis**
+### 1. Total Sales Analysis
+- Monthly total sales
+- MoM percentage change
+- Absolute difference vs. previous month
 
-* Calculate monthly total sales
-* Determine MoM % increase/decrease
-* Show absolute difference vs previous month
+### 2. Total Orders Analysis
+- Monthly total orders
+- MoM percentage change
+- Difference vs. previous month
 
-### 2. **Total Orders Analysis**
-
-* Calculate monthly total orders
-* Determine MoM % change
-* Show difference vs previous month
-
-### 3. **Total Quantity Sold Analysis**
-
-* Calculate monthly total quantity sold
-* Determine MoM % change
-* Show difference vs previous month
+### 3. Total Quantity Sold Analysis
+- Monthly total quantity
+- MoM percentage change
+- Difference vs. previous month
 
 ---
 
 ## 📈 Chart Requirements
 
 1. **Calendar Heat Map**
+   - Daily sales visualized via a color gradient
+   - Dynamic by selected month
+   - Tooltips show Sales, Orders, Quantity
 
-   * Color-coded by sales volume
-   * Dynamic per selected month
-   * Tooltips with Sales, Orders, Quantity
-
-2. **Weekday vs Weekend Sales**
-
-   * Segment data for performance comparison
-   * Highlight differences in patterns
+2. **Weekday vs Weekend Comparison**
+   - Segment sales to reveal patterns
 
 3. **Sales by Store Location**
-
-   * Visualize sales per store
-   * MoM difference metrics
-   * Color coding for increase/decrease
+   - Show per-store sales and MoM change
+   - Conditional color coding (e.g., green for growth)
 
 4. **Daily Sales with Average Line**
-
-   * Compare each day to daily average
-   * Highlight above/below average
+   - Highlight days above or below daily average
 
 5. **Sales by Product Category**
-
-   * Identify top-performing categories
+   - Identify high-performing categories
 
 6. **Top 10 Products by Sales**
-
-   * Quickly visualize best sellers
+   - Showcase best-selling items
 
 7. **Sales by Days & Hours**
-
-   * Heat map for demand peaks
-   * Tooltips with key metrics
+   - Heat map of demand by weekday and hour
+   - Tooltips provide summary metrics
 
 ---
 
-## 📦 Data Model
+## 🗄 Data Model Overview
 
-### **Fact Table: Transactions**
-
+### Fact Table: `Transactions`
 **Core fields:**
-
-* Hour, product\_category, product\_detail, product\_id, product\_type
-* sales, store\_id, store\_location
-* transaction\_id, transaction\_date, transaction\_city, transaction\_time
-* unit\_price, transaction\_qty
+- Hour, product_category, product_detail, product_id, product_type  
+- sales, store_id, store_location  
+- transaction_id, transaction_date, transaction_time, transaction_city  
+- unit_price, transaction_qty  
 
 **Calculated measures:**
-
-* CM Orders, CM Quantity, CM Sales
-* PM Orders, PM Quantity, PM Sales
-* MoM Growth & Difference (Sales, Orders, Quantity)
-* Total Orders, Total Quantity Sold, Total Sales
-* Daily Avg Sales
-* TT for Hour, Colour For Bars
-* Labels for Product Category, Product Type, Store Location
-* Foot Note, Place Holder
+- Current Month (CM): CM Orders, CM Quantity, CM Sales  
+- Previous Month (PM): PM Orders, PM Quantity, PM Sales  
+- MoM Growth & Difference (Sales, Orders, Quantity)  
+- Total Orders, Total Quantity Sold, Total Sales  
+- Daily Avg Sales, TT for Hour, Colour For Bars  
+- Label For Product Category / Type / Store Location, Foot Note, Place Holder  
 
 ---
 
-### **Dimension Table: Date Table**
+### Dimension Table: `Date Table`
+- Date, Day Name, Day Number  
+- Month, Month Number, Month Year  
+- Week Day Number, Week Number  
+- Weekend / Weekday flag  
 
-* Date, Day Name, Day Number
-* Month, Month Number, Month Year
-* Week Day Number, Week Number
-* Weekend / Weekday
+---
 
 **Relationship**
-
-* One-to-Many: `Date Table[Date]` → `Transactions[transaction_date]`
+- One-to-many: `Date Table[Date]` → `Transactions[transaction_date]`
 
 ---
 
 ## 💡 Why This Model Works for BI
-
-* Star schema for clean separation of facts/dimensions
-* Date table enables:
-
-  * Calendar heat maps
-  * MoM & YoY trends
-  * Weekday/weekend splits
-* Prebuilt measures simplify visuals
-* Conditional formatting improves storytelling
-
----
-
-## 📸 Visuals
-
-1. Calendar Heat Map
-2. Weekday vs Weekend comparison
-3. Store Location MoM bar chart
-4. Daily Sales with Average line
-5. Product Category & Type breakdown
-6. Top 10 Products by sales
-7. Day × Hour heat map
+- **Star schema** ensures clarity and performant design  
+- **Granularity** allows row-level transactional analysis  
+- **Date dimension** enables:
+  - Heat maps
+  - Time intelligence
+  - Weekday/weekend splits
+- **Pre-computed measures** reduce DAX complexity  
+- **Labels & formatting** enhance storytelling  
 
 ---
 
-## 🧪 Reproduction Steps
-
-1. Load sample CSVs into MySQL
-2. Build `Date Table` in Power Query
-3. Create relationship as above
-4. Implement DAX measures
-5. Recreate visuals per requirements
-
----
-
-
-
-
-
-## 🙋‍♂️ Author
-
-Your Name — [LinkedIn](#) · [Email](#)
+## 📷 Visuals
+- Calendar Heat Map  
+- Weekday vs Weekend Comparison  
+- Store-level MoM Bar Chart  
+- Daily Sales with Average Line  
+- Product Category & Type Breakdowns  
+- Top 10 Products by Sales  
+- Day × Hour Heat Map  
 
 ---
 
+## 🔄 Reproduction Steps
+1. Load sample data into MySQL  
+2. Create `Date Table` in Power Query  
+3. Model relationships  
+4. Implement DAX measures  
+5. Build visuals based on requirements  
 
+---
 
+## 🖼 Screenshots
+- **Main Dashboard:** ![Main Dashboard](https://github.com/Nikhillonkar19-code/-Coffee-Shop-Sales-Power-BI-MySQL/blob/main/Coffee-Shop-Sales.png)  
+- **Data Model (ER Diagram):** `images/data-model.png`  
+
+---
+
+## 📜 License
+MIT License
+
+---
+
+## 👤 Author
+**Your Name** — [LinkedIn](#) · [Email](#)
