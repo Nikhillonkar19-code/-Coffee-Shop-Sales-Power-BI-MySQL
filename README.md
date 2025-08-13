@@ -152,8 +152,11 @@ The coffee shop chain required a **sales performance dashboard** to monitor busi
 ---
 
 ## 🖼 Screenshots
-- **Main Dashboard:** ![Main Dashboard](https://github.com/Nikhillonkar19-code/-Coffee-Shop-Sales-Power-BI-MySQL/blob/main/Coffee-Shop-Sales.png)  
-- **Data Model (ER Diagram):** `images/data-model.png`  
+- **Main Dashboard:**  
+![Main Dashboard](https://github.com/Nikhillonkar19-code/-Coffee-Shop-Sales-Power-BI-MySQL/blob/main/Coffee-Shop-Sales.png)  
+
+- **Data Model (ER Diagram):**  
+![Data Model](https://github.com/Nikhillonkar19-code/-Coffee-Shop-Sales-Power-BI-MySQL/blob/main/Coffee%20shop%20Data%20Model.png)
 
 ---
 
@@ -164,3 +167,4 @@ MIT License
 
 ## 👤 Author
 **Your Name** — [LinkedIn](#) · [Email](#)
+
