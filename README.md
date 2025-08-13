@@ -1,8 +1,15 @@
 # ☕ Coffee-Shop-Sales-Power-BI-MySQL
 
+
+
+
+
 ![Dashboard Preview](https://github.com/Nikhillonkar19-code/-Coffee-Shop-Sales-Power-BI-MySQL/blob/main/Coffee-Shop-Sales.png)
 
 An end-to-end business intelligence project analyzing real coffee shop transactional data. Designed and implemented a fully interactive Power BI dashboard connected to MySQL, delivering actionable insights into sales, orders, and product performance trends.
+
+
+
 
 ---
 
@@ -159,12 +166,13 @@ The coffee shop chain required a **sales performance dashboard** to monitor busi
 ![Data Model](https://github.com/Nikhillonkar19-code/-Coffee-Shop-Sales-Power-BI-MySQL/blob/main/Coffee%20shop%20Data%20Model.png)
 
 ---
+## 🔗 Live Project
+[![View Live Dashboard](https://img.shields.io/badge/Live-Dashboard-blue?style=for-the-badge&logo=powerbi)](https://app.powerbi.com/view?r=eyJrIjoiNjIzYjhlMTItNmQ5Ny00MDZjLTk1YzQtYTI0OWY1ODAzMDY3IiwidCI6IjNiYTNhODMxLTFkMzItNDA4My1hMzBjLWQ0YTk0NGYzNWI3ZSJ9)
 
-## 📜 License
-MIT License
+
 
 ---
 
 ## 👤 Author
-**Your Name** — [LinkedIn](#) · [Email](#)
+**Nikhil Lonkar** — [LinkedIn](https://linkedin.com/in/nikhil-lonkar-0436a1338)
 
